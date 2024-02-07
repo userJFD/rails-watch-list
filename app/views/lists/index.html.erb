@@ -1,0 +1,23 @@
+<div class="cover mb-4 d-flex align-items-center justify-content-center" style="background-image: url(/assets/cover.jpg); height: 350px; background-size: cover; background-repeat: no-repeat; background-position: center; ">
+  <div class="text-center text-white">
+    <h1>Save any kind of movies</h1>
+    <h3 class="typed-js" data-controller="typed-js"></h3>
+  </div>
+</div>
+<div class="container py-5">
+  <div class="d-flex align-items-center justify-content-between mb-3">
+    <h5 class="mb-0">My Lists</h5>
+    <%= link_to "Create a movie list", new_list_path, class: "btn btn-flat btn-success text-light shadow mb-5"  %>
+  </div>
+  <div class="row d-flex justify-content-between">
+    <% @lists.each do |list| %>
+      <div class="" style="width: 33.3%;   ">
+        <%= link_to list_path(list), class:"text-decoration-none text-black font-weight-bold" do %>
+          <div class="card-category text-center shadow p-3 mb-5 bg-white rounded" stlye="">
+            <%= list.name %>
+          </div>
+        <% end %>
+      </div>
+    <% end %>
+  </div>
+</div>
